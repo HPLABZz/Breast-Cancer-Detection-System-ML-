@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Rock vs Mine Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h2>Prediction Results</h2>
+
+            <div class="result-box">
+                {% if final_resultRF %}
+                    {{ final_resultRF }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> <b>Himanshu Patel. <span style="text-decoration: line-through;">All Rights Reserved</span></b></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
