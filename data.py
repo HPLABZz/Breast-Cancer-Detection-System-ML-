@@ -37,8 +37,7 @@ rf_conf_matrix = confusion_matrix(y_test, rf_model.predict(X_test_scaled))
 
 joblib.dump(rf_model, "models/random_forest_model.pkl")
 
-input_data = (923169,9.683,19.34,61.05,285.7,0.08491,0.0503,0.02337,0.009615,0.158,0.06235,0.2957,1.363,2.054,18.24,0.00744,0.01123,0.02337,0.009615,0.02203,0.004154,10.93,25.59,69.1,364.2,0.1199,0.09546,0.0935,0.03846,0.2552,0.0792
-)
+input_data = (17.99,10.38,122.8,1001,0.1184,0.2776,0.3001,0.1471,0.2419,0.07871,1.095,0.9053,8.589,153.4,0.006399,0.04904,0.05373,0.01587,0.03003,0.006193,25.38,17.33,184.6,2019,0.1622,0.6656,0.7119,0.2654,0.4601,0.1189)
 
 def predict_result_RF():
     if len(input_data) == X.shape[1]:
@@ -46,8 +45,8 @@ def predict_result_RF():
         input_scaled = scaler.transform(input_array)
         pred_rf = rf_model.predict(input_scaled)
         
-        if pred_rf[0]=='M':return "Random Forest Prediction: Malignant"
-        else:       return "RandomForest Prediction: Benign"
+        if pred_rf[0]=='M':return "Random Forest Prediction: Malignant(Cancerous)"
+        else:       return "RandomForest Prediction: Benign(Non-cancerous)"
     else:
         return "Invalid input: expected 32 features only."
 
