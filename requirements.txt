@@ -3,4 +3,4 @@ numpy==1.26.4
 scikit-learn==1.4.2
 joblib==1.4.0
 pandas==2.2.3
-python>=3.7
+python==3.12.10
