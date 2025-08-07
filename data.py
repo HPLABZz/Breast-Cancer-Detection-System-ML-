@@ -45,11 +45,11 @@ def predict_result_RF():
         input_scaled = scaler.transform(input_array)
         pred_rf = rf_model.predict(input_scaled)
         
-        if pred_rf[0]=='M':return "Random Forest Prediction: Malignant(Cancerous)"
-        else:       return "RandomForest Prediction: Benign(Non-cancerous)"
+        if pred_rf[0]=='M':return "Random Forest Prediction: Malignant(Cancerous Cell)"
+        else:       return "RandomForest Prediction: Benign(Non-cancerous Cell)"
     else:
         return "Invalid input: expected 32 features only."
 
 if __name__ == "__main__":
     result = print(predict_result_RF())
-    print(result)
+    
