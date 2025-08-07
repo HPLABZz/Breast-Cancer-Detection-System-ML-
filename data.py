@@ -31,9 +31,9 @@ rf_train_acc = accuracy_score(y_train, rf_model.predict(X_train_scaled))
 rf_test_acc = accuracy_score(y_test, rf_model.predict(X_test_scaled))
 rf_conf_matrix = confusion_matrix(y_test, rf_model.predict(X_test_scaled))
 
-# print(f"Train Accuracy: {rf_train_acc*100:.4f}")
-# print(f"Test Accuracy: {rf_test_acc*100:.4f}")
-# print("Confusion Matrix:\n", rf_conf_matrix)
+print(f"Train Accuracy: {rf_train_acc*100:.4f}")
+print(f"Test Accuracy: {rf_test_acc*100:.4f}")
+print("Confusion Matrix:\n", rf_conf_matrix)
 
 joblib.dump(rf_model, "models/random_forest_model.pkl")
 

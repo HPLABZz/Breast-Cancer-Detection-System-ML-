@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.sqlite3
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs and debugging
+*.log
+debug.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+# Dockerfile
+docker-compose.yml
+
+# uv cache
+.uv/

@@ -1,0 +1,10 @@
+services:
+  breast-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: breast-backend
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
