@@ -51,73 +51,10 @@ This project leverages **supervised machine learning algorithms** to classify tu
 
 ---
 
-## ⚙️ How It Works
-
-1. Data preprocessing (cleaning, normalization)
-2. Feature selection
-3. Model training using ML algorithms
-4. Prediction on new input data
-5. (Optional) Deployment using Flask web app
-
----
-
-## 📸 Project Workflow
-
-```mermaid
-flowchart LR
-    A[Input Data] --> B[Preprocessing]
-    B --> C[Model Training]
-    C --> D[Prediction]
-    D --> E[Result Output]
-```
-
----
-
-## ▶️ Getting Started
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/your-username/breast-cancer-detection.git
-cd breast-cancer-detection
-```
-
-### 2️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3️⃣ Run the Project
-
-```bash
-python main.py
-```
-
----
-
 ## 📈 Future Improvements
 
 * 🔍 Hyperparameter tuning for better accuracy
 * 🌐 Full-stack deployment (React + Flask)
 * 📊 Advanced data visualization dashboard
-* 🤖 Integration with deep learning models
 
 ---
-
-## 🤝 Contributing
-
-Contributions are welcome!
-Feel free to fork the repo and submit a pull request.
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
----
-
-## ⭐ Support
-
-If you like this project, please give it a ⭐ on GitHub!
