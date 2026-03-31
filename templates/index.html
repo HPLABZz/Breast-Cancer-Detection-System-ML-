@@ -1,27 +1,64 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-    <title>Rock vs Mine Prediction</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Cancer Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
-    <div class="main">
-        <div class="container">
-            <h2>Prediction Results</h2>
+    <div class="container">
+        <h1>Breast Cancer Predictor Model</h1>
 
-            <div class="result-box">
-                {% if final_resultRF %}
-                    {{ final_resultRF }}
-                {% endif %}
+        <textarea id="inputBox" placeholder="Enter 30 comma-separated values"></textarea>
+        
+        <button onclick="predict()">Predict</buttoBn>
+        <button onclick="toggleFeatures()" class="toggle-btn">
+            Show Input Features
+        </button>
+
+            <div id="featureBox" class="feature-box">
+                <h3>Input Features Order</h3>
+                <ol>
+                    <li>radius_mean</li>
+                    <li>texture_mean</li>
+                    <li>perimeter_mean</li>
+                    <li>area_mean</li>
+                    <li>smoothness_mean</li>
+                    <li>compactness_mean</li>
+                    <li>concavity_mean</li>
+                    <li>concave points_mean</li>
+                    <li>symmetry_mean</li>
+                    <li>fractal_dimension_mean</li>
+                    <li>radius_se</li>
+                    <li>texture_se</li>
+                    <li>perimeter_se</li>
+                    <li>area_se</li>
+                    <li>smoothness_se</li>
+                    <li>compactness_se</li>
+                    <li>concavity_se</li>
+                    <li>concave points_se</li>
+                    <li>symmetry_se</li>
+                    <li>fractal_dimension_se</li>
+                    <li>radius_worst</li>
+                    <li>texture_worst</li>
+                    <li>perimeter_worst</li>
+                    <li>area_worst</li>
+                    <li>smoothness_worst</li>
+                    <li>compactness_worst</li>
+                    <li>concavity_worst</li>
+                    <li>concave points_worst</li>
+                    <li>symmetry_worst</li>
+                    <li>fractal_dimension_worst</li>
+                </ol>
             </div>
-        </div>
+
+            <div id="error"></div>
+            <div id="result"></div>
     </div>
-
-    <footer class="footer">
-        <p>&copy; <span id="year"></span> <b>Himanshu Patel. <span style="text-decoration: line-through;">All Rights Reserved</span></b></p>
-    </footer>
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="/static/script.js"></script>
 </body>
+
 </html>
